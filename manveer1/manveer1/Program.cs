@@ -12,16 +12,21 @@ namespace manveer1
         static void Main(string[] args)
         {
             Console.WriteLine("Downloading File");
-            download();
+            Download();
             Console.ReadLine();
         }
-        static void download()
+        static void Download()
         {
-            Task.Run(() =>
-            {
-                Thread.Sleep(3000);
-                Console.WriteLine("Download Complete");
-            });
+            Network.Download();
         }
     }
-}
+    class Network
+    {
+        static public Task Download()
+        {
+
+            return Task.Run() => {Thread.Sleep(3000)});
+        }
+    }
+    }
+
