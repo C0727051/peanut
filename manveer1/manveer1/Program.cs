@@ -15,9 +15,11 @@ namespace manveer1
             Download();
             Console.ReadLine();
         }
-        static void Download()
+        static async void Download()
         {
-            Network.Download();
+            await Network.Download();
+           
+            Console.WriteLine("Download Complete");
         }
     }
     class Network
@@ -25,7 +27,7 @@ namespace manveer1
         static public Task Download()
         {
 
-            return Task.Run() => {Thread.Sleep(3000)});
+            return Task.Run(() => Thread.Sleep(3000));
         }
     }
     }
