@@ -20,5 +20,7 @@ namespace manveer1
             Thread.Sleep(4000);
             Console.WriteLine("Download Complete");
         }
+        
+        static int Add(int a, int b) {return a+b;}
     }
 }
