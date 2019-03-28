@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace manveer1
@@ -10,7 +11,14 @@ namespace manveer1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Peter rules the IT Universe");
+            Console.WriteLine("Downloading File");
+            download();
+            Console.ReadLine();
+        }
+        static void download()
+        {
+            Thread.Sleep(4000);
+            Console.WriteLine("Download Complete");
         }
     }
 }
